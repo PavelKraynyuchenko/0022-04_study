@@ -1,7 +1,7 @@
 import math
 import random
 
-class m():
+class calc():
     def fun_fact(a):
         if a == 0:
             return 1
