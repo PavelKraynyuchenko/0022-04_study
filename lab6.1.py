@@ -1,104 +1,80 @@
 import math
 import random
-
-
-def factorial(n):
-    if n == 0:
+def fun_sum(a,b):
+    print("введите a=")
+    a = float(input())
+    print("введите b=")
+    b = float(input())
+    return print(a+b)
+def fun_vychit(a,b):
+    print("введите a=")
+    a = float(input())
+    print("введите b=")
+    b = float(input())
+    return print(a-b)
+def fun_umnoj(a,b):
+    print("введите a=")
+    a = float(input())
+    print("введите b=")
+    b = float(input())
+    return print(a*b)
+def fun_delen(a,b):
+    print("введите a=")
+    a = float(input())
+    print("введите b=")
+    b = float(input())
+    return print(a/b)
+def fun_stepen(a,b):
+    print("введите a=")
+    a = float(input())
+    print("введите b=")
+    b = float(input())
+    return print(a**b)
+def fun_module(a):
+    print("введите a=")
+    a = float(input())
+    return print(math.fabs(a))
+def fun_random(a,b):
+    print("диапазон случайных чисел от=")
+    a = int(input())
+    print("до=")
+    b = int(input())
+    return print(random.randint(a,b))
+def fun_fact(a):
+    if a ==0:
         return 1
-    return n * factorial(n - 1)
-
-
-def sum():
-    print("a =")
+    return a*fun_fact(a-1)
+def fun_arccos(a):
+    print("введите a= от 0 до 1")
     a = float(input())
-    print("b = ")
-    b = float(input())
-    print(a + b)
-
-
-def de():
-    print("a =")
-    a = float(input())
-    print("b = ")
-    b = float(input())
-    print(a / b)
-
-
-def node():
-    print("a =")
-    a = float(input())
-    print("b = ")
-    b = float(input())
-    print(a * b)
-
-
-def nosum():
-    print("a =")
-    a = float(input())
-    print("b = ")
-    b = float(input())
-    print(a - b)
-
-
-def s():
-    print("a =")
-    a = float(input())
-    print("b = ")
-    b = float(input())
-    print(a ** b)
-
-
-def mod():
-    print("a =")
-    a = float(input())
-    print(math.fabs(a))
-
-
-run = True
-print(
-    "/ - деление \n* - умножение \n+ - сложение \n- - разность\nm - модуль\narccos - arccos \n^ - возведение в степень \n! - факториал \nrand - рандомное число \nquit - выход")
-
-while (run):
-    str = input()
-
-    if str == "/":
-        de()
-
-    elif str == "quit":
-        run = False
-
-    elif str == "*":
-        node()
-
-    elif str == "-":
-        nosum()
-
-    elif str == "+":
-        sum()
-
-
-    elif str == "^":
-        s()
-
-    elif str == "m":
-        mod()
-
-    elif str == "arccos":
-        print("a =")
-        a = float(input())
-        print(math.acos(a))
-
-    elif str == "!":
-        print("a =")
-        a = float(input())
-        print(factorial(a))
-
-    elif str == "rand":
-        print("рандомное число в диапазона от = ")
+    return print(math.acos(a))
+flag=True
+print("введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
+while (flag):
+    a = 0; b = 0; p = 0;
+    p = input()
+    if p == "+":
+        fun_sum(a,b)
+    elif p == "-":
+        fun_vychit(a,b)
+    elif p == "*":
+        fun_umnoj(a,b)
+    elif p == "/":
+        fun_delen(a,b)
+    elif p == "^":
+        fun_stepen(a,b)
+    elif p == "module":
+        fun_module(a)
+    elif p == "random":
+        fun_random(a,b)
+    elif p == "fact":
+        print("введите a=")
         a = int(input())
-        print("до =")
-        b = int(input())
-        print(random.randint(a, b))
-
+        print(fun_fact(a))
+    elif p == "arccos":
+        fun_arccos(a)
+    elif p == "quit":
+        flag=False
     else:
-        print("команда отсутствует")
+        print("Неправильная команда, попробуй еще раз.")
+
