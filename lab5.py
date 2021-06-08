@@ -1,5 +1,5 @@
-str = []
-str2 = []
+list1 = []
+key2 = []
 print("вводите слова")
 print("quit -выход из цикла")
 while(True):
@@ -7,15 +7,15 @@ while(True):
     if x == "quit":
         break
     else:
-        str.append(x)
-str3 = set(str)
-print("список -",str)
-print("множество - ",str3)
-print("количество символов в списке =",len(str))
-print("заполните следующий список из",len(str),"слов")
-for i in range(len(str)):
+        list1.append(x)
+plenty3 = set(list1)
+print("список -",list1)
+print("множество - ",plenty3)
+print("количество символов в списке =",len(list1))
+print("заполните следующий список из",len(list1),"слов")
+for i in range(len(list1)):
     x = input()
-    str2.append(x)
-print(str2)
-dir = {str[i]:str2[i] for i in range(len(str))}
-print(dir)
+    key2.append(x)
+print(key2)
+dict = {list1[i]:key2[i] for i in range(len(list1))}
+print(dict)
