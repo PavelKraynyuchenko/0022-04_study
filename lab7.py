@@ -1,18 +1,17 @@
-#r = 0
 def writing_file(name):
     list_1 = []
 
-    file = open(name + ".txt", "r")
+    file = open(name + '.txt', 'r')
     for line in file:
         list_1.append(line)
     file.close
-    file = open(name + ".txt", "w")
 
+    file = open(name + '.txt', 'w')
     for key, val in dict.items():
         file.write('{}:{}\n'.format(key, val))
     file.close
-    file = open(name + ".txt", "a")
 
+    file = open(name + '.txt', 'a')
     for i in range(len(list_1)):
         file.write(list_1[i])
     file.close
@@ -22,7 +21,7 @@ mass = []
 list_3 = []
 
 print("quit -выход из цикла")
-
+print("вводите слова")
 while (True):
     c = input()
     if c == "quit":
@@ -33,11 +32,11 @@ while (True):
 set_2 = set(mass)
 print("список -", mass)
 print("множество - ", set_2)
-print("количество символов в список =", len(mass))
+print("количество символов в списоке =", len(mass))
 print("заполните следующий список из", len(mass), "символов")
 
 for i in range(len(mass)):
-    check = input()
+    c = input()
     list_3.append(c)
 
 print(list_3)
@@ -47,7 +46,6 @@ print("Введите название файла")
 name = input()
 
 dict = s
-
 try:
     writing_file(name)
 except IOError as e:
