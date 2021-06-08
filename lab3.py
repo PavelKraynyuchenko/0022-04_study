@@ -1,66 +1,68 @@
 import math
 import random
 
-def fact(x):
-    if x ==0:
+def fact(a):
+    if a ==0:
         return 1
-    return x*fact(x-1)
+    return a*fact(a-1)
 flag= True
 print("введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
 while (flag):
-    a = input()
+    com = input()
 
-    if a == "+":
-        print("введите x=")
-        x=float(input())
-        print("введите y=")
-        y=float(input())
-        print(x+y)
-    elif a == "-":
-        print("введите x=")
-        x = float(input())
-        print("введите y=")
-        y = float(input())
-        print(x-y)
-    elif a == "*":
-        print("введите x=")
-        x = float(input())
-        print("введите y=")
-        y = float(input())
-        print(x*y)
-    elif a == "/":
-        print("введите x=")
-        x = float(input())
-        print("введите y=")
-        y = float(input())
-        print(x/y)
-    elif a == "^":
-        print("введите x=")
-        x = float(input())
-        print("введите y=")
-        y = float(input())
-        print(x**y)
-    elif a == "module":
-        print("введите x=")
-        x = float(input())
-        print(math.fabs(x))
-    elif a == "random":
+    if com == "+":
+        print("введите a=")
+        a=float(input())
+        print("введите b=")
+        b=float(input())
+        print(a+b)
+    elif com == "-":
+        print("введите a=")
+        a = float(input())
+        print("введите b=")
+        b = float(input())
+        print(a-b)
+    elif com == "*":
+        print("введите a=")
+        a = float(input())
+        print("введите b=")
+        b = float(input())
+        print(a*b)
+    elif com == "/":
+        print("введите a=")
+        a = float(input())
+        print("введите b=")
+        b = float(input())
+        print(a/b)
+    elif com == "^":
+        print("введите a=")
+        a = float(input())
+        print("введите b=")
+        b = float(input())
+        print(a**b)
+    elif com == "module":
+        print("введите a=")
+        a = float(input())
+        print(math.fabs(a))
+    elif com == "random":
         print("диапазон случайных чисел от=")
-        x = int(input())
+        a = int(input())
         print("до=")
-        y = int(input())
-        print(random.randint(x,y))
-    elif a == "fact":
-        print("введите x=")
-        x = int(input())
-        print(fact(x))
-    elif a == "arccos":
-        print("введите x=")
-        x = float(input())
-        print(math.acos(x))
-    elif a == "quit":
+        b = int(input())
+        print(random.randint(a,b))
+    elif com == "fact":
+        print("введите a=")
+        a = int(input())
+        print(fact(a))
+    elif com == "arccos":
+        print("введите a=")
+        a = float(input())
+        print(math.acos(a))
+    elif com == "quit":
         flag = False
     else:
         print("Неправильно, попробуй еще раз.")
+
+
 
 
