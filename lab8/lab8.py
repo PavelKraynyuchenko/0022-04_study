@@ -1,43 +1,42 @@
-from math_two import m
+from math_two import calc
 
-run = True
-print(
-        "введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
+flag = True
+print("введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
 
-while (run):
-    str = input()
+while (flag):
+    com = input()
 
-    if str == "/":
-        m.fun_delen(self=('self'))
+    if com == "/":
+        calc.fun_delen(self=('self'))
 
-    elif str == "quit":
-        run = False
+    elif com == "quit":
+        flag = False
 
-    elif str == "*":
-        m.fun_umnoj(self=('self'))
+    elif com == "*":
+        calc.fun_umnoj(self=('self'))
 
-    elif str == "-":
-        m.fun_vychit(self=('self'))
+    elif com == "-":
+        calc.fun_vychit(self=('self'))
 
-    elif str == "+":
-        m.fun_sum(self=('self'))
+    elif com == "+":
+        calc.fun_sum(self=('self'))
 
-    elif str == "^":
-        m.fun_stepen(self=('self'))
+    elif com == "^":
+        calc.fun_stepen(self=('self'))
 
-    elif str == "m":
-        m.fun_module(self=('self'))
+    elif com == "module":
+        calc.fun_module(self=('self'))
 
-    elif str == "arccos":
-        m.fun_arccos(self=('self'))
+    elif com == "arccos":
+        calc.fun_arccos(self=('self'))
 
-    elif str == "!":
+    elif com == "fact":
         print("a =")
         a = float(input())
-        print(m.fun_fact(a))
+        print(calc.fun_fact(a))
 
-    elif str == "rand":
-        m.fun_random(self=('self'))
+    elif com == "random":
+        calc.fun_random(self=('self'))
 
     else:
         print("Неправильно, попробуй еще раз.")
