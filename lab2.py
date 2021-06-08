@@ -1,13 +1,13 @@
 def main():
-    s = input('введите строку')
-    h=0
-    for i in range(0,len(s)):
-        if s[i]=='c':
-            h=h+1
+    str = input('введите строку')
+    count=0 # count-счетчик
+    for i in range(0,len(str)):
+        if str[i]=='c':
+            count=count+1
     print()
-    print("символ 'c' встретился ",h,"раз")
-    for i in range (0,len(s)-1):
+    print("символ 'c' встретился ",count,"раз")
+    for i in range (0,len(str)-1):
         if i==2:
             continue
-        print(s[i],end ='')
+        print(str[i],end ='')
 main()
