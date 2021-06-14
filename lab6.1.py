@@ -51,29 +51,29 @@ def fun_arccos(a):
 flag=True
 print("введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
 while (flag):
-    a = 0; b = 0; p = 0;
-    p = input()
-    if p == "+":
+    a = 0; b = 0; com = 0;
+    com = input()
+    if com == "+":
         fun_sum(a,b)
-    elif p == "-":
+    elif com == "-":
         fun_vychit(a,b)
-    elif p == "*":
+    elif com == "*":
         fun_umnoj(a,b)
-    elif p == "/":
+    elif com == "/":
         fun_delen(a,b)
-    elif p == "^":
+    elif com == "^":
         fun_stepen(a,b)
-    elif p == "module":
+    elif com == "module":
         fun_module(a)
-    elif p == "random":
+    elif com == "random":
         fun_random(a,b)
-    elif p == "fact":
+    elif com == "fact":
         print("введите a=")
         a = int(input())
         print(fun_fact(a))
-    elif p == "arccos":
+    elif com == "arccos":
         fun_arccos(a)
-    elif p == "quit":
+    elif com == "quit":
         flag=False
     else:
         print("Неправильная команда, попробуй еще раз.")
