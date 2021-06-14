@@ -2,7 +2,7 @@ import math
 import random
 
 def fact(a):
-    if a ==0:
+    if a==0:
         return 1
     return a*fact(a-1)
 flag= True
