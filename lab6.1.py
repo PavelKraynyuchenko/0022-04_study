@@ -49,7 +49,17 @@ def fun_arccos(a):
     a = float(input())
     return print(math.acos(a))
 flag=True
-print("введите действие:\n+ -сложение,\n- -вычитание,\n/ -деление,\n* -умножние,\n^ -возведение в степень,\nmodule -модуль,\nrandom -случайное число,\nfact -факториал,\narccos -arccos,\nquit -выход из программы")
+print("введите действие:"
+      "\n + -сложение,"
+      "\n - -вычитание,"
+      "\n / -деление,"
+      "\n * -умножние,"
+      "\n ^ -возведение в степень,"
+      "\n module -модуль,"
+      "\n random -случайное число,"
+      "\n fact -факториал,"
+      "\n arccos -arccos,"
+      "\n quit -выход из программы")
 while (flag):
     a = 0; b = 0; com = 0;
     com = input()
