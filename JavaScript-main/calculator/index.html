@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Калькулятор</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<style>
+   textarea {
+    resize: none;
+   }
+   .container {
+      margin-top: 50px;
+      margin-left: 350px;
+      float: left;
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr 2fr;
+      grid-gap: 1px;
+      background: linear-gradient(to bottom right, green, #9861ff);
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 500px;
+   }
+   .historycontainer {
+      margin-top: 50px;
+      margin-right: 330px;
+      float: right;
+      background: linear-gradient(to bottom right, #9861ff, green);
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 350px;
+      height: 585px;
+   }
+   .item {
+      align-items: center;
+      height: 90px;
+      font-size: 30px;
+      cursor: pointer;
+      font-weight: bold;
+   }
+   form {
+      max-width: 100%;
+   }
+   input {
+      background-color: white;
+      width: 100%;
+      font-size: 50px;
+      height: 90px;
+      outline: none;
+      text-align: right;
+   }
+   .input {
+      grid-column: 1/-1;
+      background-color: white;
+      width: 100%;
+      font-size: 50px;
+      height: 90px;
+      outline: none;
+      text-align: right;
+   }
+</style>
+<body>
+   <div class="container">
+      <div class="item input"><form name="form"><input type="text" name="textview" readonly></form></div>
+      <div class="item clean; btn btn-outline-light" onclick="clean()">C</div>
+      <div class="item back; btn btn-outline-warning" onclick="back()">&larr;</div>
+      <div class="item (; btn btn-outline-warning" onclick="insert('(')">(</div>
+      <div class="item ); btn btn-outline-warning" onclick="insert(')')">)</div>
+      <div class="item 7; btn btn-outline-info" onclick="insert('7')">7</div>
+      <div class="item 8; btn btn-outline-info" onclick="insert('8')">8</div>
+      <div class="item 9; btn btn-outline-info" onclick="insert('9')">9</div>
+      <div class="item +; btn btn-outline-warning" onclick="insert('+')">+</div>
+      <div class="item 4; btn btn-outline-info" onclick="insert('4')">4</div>
+      <div class="item 5; btn btn-outline-info" onclick="insert('5')">5</div>
+      <div class="item 3; btn btn-outline-info" onclick="insert('6')">6</div>
+      <div class="item -; btn btn-outline-warning" onclick="insert('-')">-</div>
+      <div class="item 1; btn btn-outline-info" onclick="insert('1')">1</div>
+      <div class="item 2; btn btn-outline-info" onclick="insert('2')">2</div>
+      <div class="item 3; btn btn-outline-info" onclick="insert('3')">3</div>
+      <div class="item *; btn btn-outline-warning" onclick="insert('*')">&times;</div>
+      <div class="item .; btn btn-outline-warning" onclick="insert('.')">.</div>
+      <div class="item zero; btn btn-outline-info" onclick="insert('0')">0</div>
+      <div class="item equal; btn btn-outline-warning" onclick="equal()">=</div>
+      <div class="item /; btn btn-outline-warning" onclick="insert('/')">&divide;</div>
+   </div>
+   <div class="historycontainer">
+      <div align="right" style="height=100px" class="item history"><form name="history"><textarea style="height:535px;" name="textarea" readonly></textarea></form></div>
+   </div>
+      <script src="calculator.js" defer></script>
+</body>
+</html>
